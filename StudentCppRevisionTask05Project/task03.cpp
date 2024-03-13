@@ -37,5 +37,6 @@
 */
 
 int task03(int v, int t) {
-	return t >= 0 ? v >= 0 ? v * t % 56 : 56 - abs(v * t) % 56 : -1;
+	int c = v * t % 56;
+	return t >= 0 ? v >= 0 ? c : 56 + c : -1;
 }
